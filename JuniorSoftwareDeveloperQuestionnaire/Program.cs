@@ -199,11 +199,18 @@ namespace JuniorSoftwareDeveloperQuestionnaire
                 if (list.ElementAt(i).SUM == maxSum && list.ElementAt(i).PATH.Count > list.ElementAt(maxInx).PATH.Count)
                 {   
                     maxInx = i;
+                    maxDepth = list.ElementAt(i).PATH.Count;
                 }
-                else if (list.ElementAt(i).SUM > maxSum)
+                else if (list.ElementAt(i).PATH.Count == maxDepth && list.ElementAt(i).SUM > maxSum)
                 {
                     maxInx = i;
                     maxSum = list.ElementAt(i).SUM;
+                }
+                else if (list.ElementAt(i).PATH.Count > maxDepth)
+                {
+                    maxInx = i;
+                    maxSum = list.ElementAt(i).SUM;
+                    maxDepth = list.ElementAt(i).PATH.Count;
                 }
             }
             for (int i = 0; i < list.ElementAt(maxInx).PATH.Count; i++)
