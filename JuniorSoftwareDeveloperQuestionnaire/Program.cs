@@ -188,12 +188,13 @@ namespace JuniorSoftwareDeveloperQuestionnaire
         public static void displayBestPathAndSum(List<int[]> pyramid, List<PATH_AND_SUM> list)
         {
             int maxSum;
-            int maxDepth = 0;
+            int maxDepth;
             int maxInx = 0;
             int row;
             int col;
             Console.WriteLine("Best Path:");
             maxSum = list.ElementAt(0).SUM;
+            maxDepth = list.ElementAt(0).PATH.Count;
             for (int i = 1; i < list.Count; i++)
             {
                 if (list.ElementAt(i).SUM == maxSum && list.ElementAt(i).PATH.Count > list.ElementAt(maxInx).PATH.Count)
