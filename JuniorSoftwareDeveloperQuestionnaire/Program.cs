@@ -200,7 +200,7 @@ namespace JuniorSoftwareDeveloperQuestionnaire
                 {   
                     maxInx = i;
                 }
-                else if (list.ElementAt(i).SUM > maxSum || list.ElementAt(i).PATH.Count > list.ElementAt(maxInx).PATH.Count)
+                else if (list.ElementAt(i).SUM > maxSum)
                 {
                     maxInx = i;
                     maxSum = list.ElementAt(i).SUM;
